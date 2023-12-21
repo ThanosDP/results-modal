@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1841px" height="1841px" viewBox="0 0 1841 1841" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>15D3383C-A163-44DE-AC8C-97D859B526C3</title>
+    <defs>
+        <path d="M920.5,0 C1428.87811,0 1841,412.121888 1841,920.5 C1841,1428.87811 1428.87811,1841 920.5,1841 C412.121888,1841 0,1428.87811 0,920.5 C0,412.121888 412.121888,0 920.5,0 Z M920.5,527 C703.175951,527 527,703.175951 527,920.5 C527,1137.82405 703.175951,1314 920.5,1314 C1137.82405,1314 1314,1137.82405 1314,920.5 C1314,703.175951 1137.82405,527 920.5,527 Z" id="path-1"></path>
+    </defs>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="homepage-2" transform="translate(-704.000000, 59.000000)">
+            <g id="stock-photo-creative-business-professionals-having-a-group-discussion-during-a-meeting-in-a-modern-office-team-2206113947" transform="translate(704.000000, -59.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#E9E7F4" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

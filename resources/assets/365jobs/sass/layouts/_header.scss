@@ -1,0 +1,124 @@
+header {
+    nav {
+        padding-top: 1em;
+
+        .nav-list {
+            margin-bottom: unset;
+            padding-left: 0;
+            gap: 2em;
+
+            .nav-link {
+                &>a {
+                    @include linkClass(#000, true);
+                    text-decoration: none;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &>a:first-of-type {
+            @include buttonMixin(true);
+            min-width: 150px;
+        }
+    }
+}
+
+//! Desktop
+@media (min-width: 992px) {
+    .overlay {
+        display: none;
+    }
+}
+
+//! Mobile
+@media (max-width: 991px) {
+    .overlay {
+        z-index: 10;
+        display: inline;
+        position: fixed;
+        border-bottom-right-radius: 25px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #3a337c;
+        transition: width 0.5s ease-in-out;
+
+        #burger-btn {
+            z-index: 11;
+            position: fixed;
+            left: 0;
+            width: 75px;
+            height: 66px;
+            background-color: #3a337c;
+            border-bottom-right-radius: 25px;
+            transition: left 0.5s ease-in-out;
+
+            #burger-clr {
+                transition: stroke 0.5s ease-in-out;
+            }
+
+            &:hover #burger-clr {
+                stroke: lighten(#3a337c, 30%);
+                transition: stroke 0.15s ease-in-out;
+            }
+        }
+
+        .overlay-list {
+            height: 100%;
+            ;
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+
+            .nav-link {
+                width: 100%;
+
+                &:first-child {
+                    margin-top: 200px;
+                }
+
+                &:not(:last-of-type){
+                    border-bottom: 1px solid #e9e7f4;
+                }
+
+                a {
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.125rem;
+                    @include linkClass(#fff, false);
+                }
+            }
+
+            &>a {
+                @include buttonMixin(false);
+                min-width: 80%;
+                margin-top: 40px;
+                margin-bottom: auto;
+            }
+        }
+
+    }
+
+    #overlay-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        background-color: transparent;
+
+        transition: background-color 0.25s linear;
+    }
+}
