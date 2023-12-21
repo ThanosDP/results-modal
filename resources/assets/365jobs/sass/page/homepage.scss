@@ -5,6 +5,12 @@
             h2 {
                 font-weight: 600;
                 margin-bottom: 1.5rem;
+
+                strong {
+                    color: #3A337C;
+                    font-size: inherit;
+                    line-height: inherit;
+                }
             }
 
             p {
@@ -29,6 +35,10 @@
             h3 {
                 font-weight: 500;
                 margin-bottom: 1.5rem;
+
+                strong{
+                    @include purpleHighlight()
+                }
             }
 
             p {
@@ -46,7 +56,7 @@
             padding-bottom: 4rem;
             overflow: visible;
 
-            mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
+            // mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
 
             .swiper-slide {
                 //TODO transition: padding 0.5s ease-in-out;
@@ -89,8 +99,10 @@
 
                     svg {
                         position: absolute;
-                        bottom: -1rem;
+                        bottom: -2rem;
                         right: 1rem;
+                        height: 25%;
+                        width: 25%;
                     }
                 }
             }
@@ -121,17 +133,16 @@
             height: 100%;
             padding: 0 1em;
 
-            .suptitle {
+            h3 {
                 color: #7C74C7;
-                font-size: 1.125em;
+                font-size: 1.125rem !important;
                 font-weight: 400;
                 line-height: 1.5rem;
                 margin-bottom: 0.725rem;
             }
 
-            h3 {
+            .title {
                 color: #3A337C;
-                font-size: 2.78rem;
                 font-weight: 600;
                 line-height: 1.3em;
                 margin-bottom: 1.5rem;
@@ -156,54 +167,58 @@
         .news-text {
             text-align: center;
 
-
-            .suptitle {
-                font-size: 1.25em;
-                line-height: 1.75em;
+            h3 {
+                font-size: 1.25rem !important;
+                line-height: 1.75rem;
                 color: #7C74C7;
             }
 
-            h3 {
+            .title {
+                font-size: 2.7rem;
                 font-weight: 600;
                 line-height: 1.3em;
                 margin-bottom: 1.375em;
+
+                strong{
+                    @include purpleHighlight()
+                }
             }
         }
 
-        .news-swiper{
+        .news-swiper {
             width: 100%;
             height: fit-content;
-            padding: 0 2rem;
 
-            .swiper-wrapper{
-                .swiper-slide{
-                    .post{
+            .swiper-wrapper {
+                .swiper-slide {
+                    .post {
                         width: 100%;
-                        max-width: 460px;
-                        min-width: 420px;
+                        max-height: 420px;
                         padding: 2.75rem;
 
                         background-color: #F9F8FC;
                         border: 1px solid #D8D8DD;
                         border-radius: 20px;
 
-                        .date{
+                        .date {
                             display: inline;
                             color: #7C74C7;
                             font-size: 0.75rem;
                             line-height: 0.75rem;
                             padding: 0.6rem 0.875rem;
-                            border: 1px solid  #7C74C7;
+                            border: 1px solid #7C74C7;
                             border-radius: 25px;
                         }
-                        h4{
+
+                        h4 {
                             color: #3A337C;
                             font-weight: 600;
                             font-size: 1.5rem;
                             margin-top: 2rem;
                             margin-bottom: 1rem;
                         }
-                        p{
+
+                        p {
                             font-size: 0.875rem;
                             font-weight: 400;
                         }
@@ -212,9 +227,107 @@
             }
         }
     }
+
+    #contact_section {
+        &>.container {
+            background-color: #E2DFFE;
+            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        .contact-text {
+            h3 {
+                color: #3A337C;
+                font-size: 1.125rem;
+                font-weight: 400;
+                margin-bottom: 1rem;
+            }
+
+            .title {
+                color: #3A337C;
+                font-size: 4.4rem;
+                font-weight: 600;
+                line-height: 5rem;
+                margin-bottom: 0.375em;
+            }
+
+
+            p {
+                color: #3A337C;
+                font-size: 0.95rem;
+                font-weight: 300;
+                line-height: 1.5em;
+                padding-right: 5rem;
+            }
+        }
+
+        form {
+            .form-label {
+                color: #3A337C;
+                font-size: 0.95rem;
+                font-weight: 300;
+                margin-bottom: 15px;
+
+                &[for="checkbox"] {
+
+                    margin-left: 1rem;
+                    margin-top: auto;
+                    margin-bottom: auto;
+
+                    &,
+                    &>a {
+                        font-size: 0.75rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .form-control {
+                margin-bottom: 22px;
+                padding: 23px 28px;
+                font-size: 0.85rem;
+                border-radius: 32px;
+
+                &,
+                &:focus {
+                    box-shadow: unset;
+                    border: unset;
+                }
+
+                &[id="message"] {
+                    min-height: 200px;
+                    resize: none;
+                }
+            }
+
+            input[type="checkbox"] {
+                appearance: none;
+
+                margin-top: auto;
+                margin-bottom: auto;
+                border: 1px solid #3A337C;
+                background-color: transparent;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+
+                &:checked {
+                    background-color: #423a8d;
+                }
+            }
+
+            .btn-default {
+                width: 100%;
+                min-width: 100%;
+                margin-top: 22px;
+            }
+        }
+    }
 }
 
-// //! Desktop
+//! Desktop
 @media (min-width: 992px) {
     #homepage {
         #welcome_section {
@@ -268,7 +381,7 @@
             }
 
             .about-text {
-                h3 {
+                .title {
                     font-size: 2.78rem;
                 }
             }
@@ -281,6 +394,24 @@
                 h3 {
                     font-size: 2.78rem;
                 }
+            }
+
+            .news-swiper {
+                margin-bottom: 70px;
+            }
+
+            .btn-default {
+                margin-bottom: 160px;
+            }
+        }
+
+        #contact_section {
+            &>.container>.row>div {
+                margin-top: 150px;
+            }
+
+            .contact-text {
+                margin-bottom: 480px;
             }
         }
     }
@@ -331,7 +462,7 @@
                     .swiper-slide {
                         .category {
                             h4 {
-                                font-size: 1.25rem;
+                                font-size: 1rem;
                             }
                         }
                     }
@@ -354,12 +485,17 @@
                 margin-top: 1.5em;
 
                 h3,
+                .title,
                 p {
                     text-align: center;
                 }
 
                 h3 {
                     font-size: 2rem;
+                }
+
+                .title {
+                    font-size: 1.75rem;
                 }
             }
         }
@@ -368,10 +504,32 @@
             .news-text {
                 margin-top: 90px;
 
-                h3 {
-                    font-size: 2rem;
+                .title {
+                    font-size: 1.75rem;
                 }
+            }
 
+            .news-swiper {
+                margin-bottom: 45px;
+            }
+
+            .btn-default {
+                margin-bottom: 90px;
+            }
+        }
+
+        #contact_section {
+            &>.container>.row>div {
+                margin-top: 80px;
+                margin-bottom: 100px;
+            }
+
+            h3 {
+                text-align: center;
+                color: #3A337C;
+                font-size: 2.7rem;
+                font-weight: 600;
+                margin-bottom: 2rem;
             }
         }
     }

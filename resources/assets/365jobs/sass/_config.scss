@@ -24,15 +24,6 @@ footer {
 }
 
 .btn-alt {
-    @include buttonMixin(false)
-}
-
-.purple_highlight {
-    color: #3A337C;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.slidePadding {
-    padding-top: 50px;
+    @include buttonMixin(false);
+    min-width: 200px;
 }

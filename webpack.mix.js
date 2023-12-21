@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 mix.disableSuccessNotifications();
 /*
@@ -12,5 +12,11 @@ mix.disableSuccessNotifications();
  |
  */
 
-mix.js('resources/assets/365jobs/js/app.js', 'public/365jobs/js/app.js')
-    .sass('resources/assets/365jobs/sass/app.scss', 'public/365jobs/css/app.css');
+mix.js("resources/assets/365jobs/js/app.js", "public/365jobs/js/app.js").sass(
+    "resources/assets/365jobs/sass/app.scss",
+    "public/365jobs/css/app.css"
+);
+
+if (mix.inProduction()) {
+    mix.version();
+}

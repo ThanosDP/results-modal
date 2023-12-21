@@ -12036,7 +12036,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 200px;
   min-height: 50px;
   background-color: #3A337C;
   color: #fff;
@@ -12048,6 +12047,9 @@ footer {
 }
 
 .btn-alt {
+  min-width: 200px;
+}
+.btn-alt {
   text-decoration: none;
   cursor: pointer;
   font-size: 0.875em;
@@ -12058,7 +12060,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 200px;
   min-height: 50px;
   background-color: #fff;
   color: #3A337C;
@@ -12070,19 +12071,14 @@ footer {
   transition: background-color 0.5s ease;
 }
 
-.purple_highlight {
-  color: #3A337C;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.slidePadding {
-  padding-top: 50px;
-}
-
 #homepage #welcome_section .welcome-text h2, #homepage #welcome_section .welcome-text .h2 {
   font-weight: 600;
   margin-bottom: 1.5rem;
+}
+#homepage #welcome_section .welcome-text h2 strong, #homepage #welcome_section .welcome-text .h2 strong {
+  color: #3A337C;
+  font-size: inherit;
+  line-height: inherit;
 }
 #homepage #welcome_section .welcome-text p {
   font-size: 1em;
@@ -12102,6 +12098,12 @@ footer {
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
+#homepage #category_section > .container h3 strong, #homepage #category_section > .container .h3 strong {
+  all: unset;
+  color: #3A337C;
+  font-size: inherit;
+  line-height: inherit;
+}
 #homepage #category_section > .container p {
   font-size: 0.9rem;
   font-weight: 400;
@@ -12115,8 +12117,6 @@ footer {
   padding-right: 2rem;
   padding-bottom: 4rem;
   overflow: visible;
-  -webkit-mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
-          mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
 }
 #homepage #category_section .category-swiper .swiper-slide:nth-child(odd) {
   padding-top: 50px;
@@ -12152,8 +12152,10 @@ footer {
 }
 #homepage #category_section .category-swiper .swiper-slide .category svg {
   position: absolute;
-  bottom: -1rem;
+  bottom: -2rem;
   right: 1rem;
+  height: 25%;
+  width: 25%;
 }
 #homepage #category_section .category-btn {
   display: flex;
@@ -12173,16 +12175,15 @@ footer {
   height: 100%;
   padding: 0 1em;
 }
-#homepage #about_section .about-text .suptitle {
+#homepage #about_section .about-text h3, #homepage #about_section .about-text .h3 {
   color: #7C74C7;
-  font-size: 1.125em;
+  font-size: 1.125rem !important;
   font-weight: 400;
   line-height: 1.5rem;
   margin-bottom: 0.725rem;
 }
-#homepage #about_section .about-text h3, #homepage #about_section .about-text .h3 {
+#homepage #about_section .about-text .title {
   color: #3A337C;
-  font-size: 2.78rem;
   font-weight: 600;
   line-height: 1.3em;
   margin-bottom: 1.5rem;
@@ -12200,26 +12201,31 @@ footer {
 #homepage #news_section .news-text {
   text-align: center;
 }
-#homepage #news_section .news-text .suptitle {
-  font-size: 1.25em;
-  line-height: 1.75em;
+#homepage #news_section .news-text h3, #homepage #news_section .news-text .h3 {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem;
   color: #7C74C7;
 }
-#homepage #news_section .news-text h3, #homepage #news_section .news-text .h3 {
+#homepage #news_section .news-text .title {
+  font-size: 2.7rem;
   font-weight: 600;
   line-height: 1.3em;
   margin-bottom: 1.375em;
+}
+#homepage #news_section .news-text .title strong {
+  all: unset;
+  color: #3A337C;
+  font-size: inherit;
+  line-height: inherit;
 }
 #homepage #news_section .news-swiper {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0 2rem;
 }
 #homepage #news_section .news-swiper .swiper-wrapper .swiper-slide .post {
   width: 100%;
-  max-width: 460px;
-  min-width: 420px;
+  max-height: 420px;
   padding: 2.75rem;
   background-color: #F9F8FC;
   border: 1px solid #D8D8DD;
@@ -12244,6 +12250,82 @@ footer {
 #homepage #news_section .news-swiper .swiper-wrapper .swiper-slide .post p {
   font-size: 0.875rem;
   font-weight: 400;
+}
+#homepage #contact_section > .container {
+  background-color: #E2DFFE;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+#homepage #contact_section .contact-text h3, #homepage #contact_section .contact-text .h3 {
+  color: #3A337C;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+#homepage #contact_section .contact-text .title {
+  color: #3A337C;
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 0.375em;
+}
+#homepage #contact_section .contact-text p {
+  color: #3A337C;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  padding-right: 5rem;
+}
+#homepage #contact_section form .form-label {
+  color: #3A337C;
+  font-size: 0.95rem;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+#homepage #contact_section form .form-label[for=checkbox] {
+  margin-left: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#homepage #contact_section form .form-label[for=checkbox], #homepage #contact_section form .form-label[for=checkbox] > a {
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+#homepage #contact_section form .form-control {
+  margin-bottom: 22px;
+  padding: 23px 28px;
+  font-size: 0.85rem;
+  border-radius: 32px;
+}
+#homepage #contact_section form .form-control, #homepage #contact_section form .form-control:focus {
+  box-shadow: unset;
+  border: unset;
+}
+#homepage #contact_section form .form-control[id=message] {
+  min-height: 200px;
+  resize: none;
+}
+#homepage #contact_section form input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid #3A337C;
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+#homepage #contact_section form input[type=checkbox]:checked {
+  background-color: #423a8d;
+}
+#homepage #contact_section form .btn-default {
+  width: 100%;
+  min-width: 100%;
+  margin-top: 22px;
 }
 
 @media (min-width: 992px) {
@@ -12276,7 +12358,7 @@ footer {
   #homepage #about_section > .container {
     padding: 140px 2rem;
   }
-  #homepage #about_section .about-text h3, #homepage #about_section .about-text .h3 {
+  #homepage #about_section .about-text .title {
     font-size: 2.78rem;
   }
   #homepage #news_section .news-text {
@@ -12284,6 +12366,18 @@ footer {
   }
   #homepage #news_section .news-text h3, #homepage #news_section .news-text .h3 {
     font-size: 2.78rem;
+  }
+  #homepage #news_section .news-swiper {
+    margin-bottom: 70px;
+  }
+  #homepage #news_section .btn-default {
+    margin-bottom: 160px;
+  }
+  #homepage #contact_section > .container > .row > div {
+    margin-top: 150px;
+  }
+  #homepage #contact_section .contact-text {
+    margin-bottom: 480px;
   }
 }
 @media (max-width: 1200px) {
@@ -12310,7 +12404,7 @@ footer {
     margin-top: 30px;
   }
   #homepage #category_section .category-swiper .swiper-wrapper .swiper-slide .category h4, #homepage #category_section .category-swiper .swiper-wrapper .swiper-slide .category .h4 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   #homepage #category_section .category-btn {
     margin-bottom: 75px;
@@ -12324,17 +12418,38 @@ footer {
     margin-top: 1.5em;
   }
   #homepage #about_section .about-text h3, #homepage #about_section .about-text .h3,
+  #homepage #about_section .about-text .title,
   #homepage #about_section .about-text p {
     text-align: center;
   }
   #homepage #about_section .about-text h3, #homepage #about_section .about-text .h3 {
     font-size: 2rem;
   }
+  #homepage #about_section .about-text .title {
+    font-size: 1.75rem;
+  }
   #homepage #news_section .news-text {
     margin-top: 90px;
   }
-  #homepage #news_section .news-text h3, #homepage #news_section .news-text .h3 {
-    font-size: 2rem;
+  #homepage #news_section .news-text .title {
+    font-size: 1.75rem;
+  }
+  #homepage #news_section .news-swiper {
+    margin-bottom: 45px;
+  }
+  #homepage #news_section .btn-default {
+    margin-bottom: 90px;
+  }
+  #homepage #contact_section > .container > .row > div {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+  #homepage #contact_section h3, #homepage #contact_section .h3 {
+    text-align: center;
+    color: #3A337C;
+    font-size: 2.7rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
   }
 }
 header nav {
@@ -12371,7 +12486,6 @@ header nav > a:first-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 200px;
   min-height: 50px;
   background-color: #3A337C;
   color: #fff;
@@ -12466,7 +12580,6 @@ header nav > a:first-of-type:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 200px;
     min-height: 50px;
     background-color: #fff;
     color: #3A337C;
@@ -12498,8 +12611,7 @@ footer {
 footer .container {
   padding: 2rem 1.5rem;
   background-repeat: no-repeat;
-  background-size: 35%;
-  background-position: bottom -100px right;
+  background-position: bottom -4rem right 0;
 }
 footer .container ul {
   margin-top: 70px;
@@ -12536,6 +12648,16 @@ footer .container .copyright div {
   footer .container ul {
     margin-top: 20px;
     margin-bottom: 30px;
+  }
+}
+@media (min-width: 992px) {
+  footer .container {
+    background-size: 25rem;
+  }
+}
+@media (max-width: 992px) {
+  footer .container {
+    background-size: 20rem;
   }
 }
 @media (max-width: 767px) {
