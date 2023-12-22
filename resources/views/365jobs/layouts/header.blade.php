@@ -1,6 +1,6 @@
 <header class="w-100">
     <nav class="container d-flex justify-content-between align-items-center ps-4 pe-4">
-        <div class="logo ms-auto me-auto ms-lg-0 me-lg-0">
+        <div class="logo ms-auto me-auto ms-lg-0 me-lg-0" >
             @include('365jobs.partials.icons.mainLogoImage')
         </div>
         <ul class="nav-list d-none d-lg-flex align-items-center">
@@ -33,7 +33,7 @@
         <a class="d-none d-lg-flex" href="#">Contact</a>
     </nav>
     <div class="overlay">
-        <a href="javascript:void(0)" id="burger-btn" class="d-flex d-lg-none">
+        <a href="#" id="burger-btn" class="d-flex d-lg-none" aria-label="mobile nav button">
             @include('365jobs.partials.burger')
         </a>
         <ul class="overlay-list">

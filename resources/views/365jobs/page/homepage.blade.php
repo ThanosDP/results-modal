@@ -42,7 +42,7 @@
                         @foreach (range(1, 10) as $i)
                             <div class="swiper-slide">
                                 <div class="category position-relative">
-                                    <img src="365jobs/images/customerService.png" alt="Customer Service">
+                                    <img src="365jobs/images/customerService.webp" alt="Customer Service">
                                     <h4> Customer Service </h4>
                                     @include('365jobs.partials.icons.customerServiceIcon')
                                 </div>
@@ -60,7 +60,7 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-11 col-sm-8 col-md-6 col-lg-6 col-xl-5">
                         <div id="about-image-reveal" class="about-image">
-                            <img src="/365jobs/images/aboutUs.jpg" alt="About us image">
+                            <img src="/365jobs/images/aboutUs.webp" alt="About us image">
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-6 offset-xl-1">
@@ -145,7 +145,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label" for="message">Leave us a message<sup>*</sup></label>
-                                    <textarea class="form-control" id="message" placeholder="Message (max characters 250)"></textarea>
+                                    <textarea class="form-control" id="message" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12 d-flex align-items-center">
                                     <input id="checkbox" type="checkbox" />
@@ -153,7 +153,7 @@
                                             Use</a>.</label>
                                 </div>
                                 <div class="col-12">
-                                    <a href="#" class="btn-default">Submit</a>
+                                    <button type="submit" class="btn-default" onclick="{return false}">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -166,4 +166,140 @@
 
 
 @push('scripts')
+    <script>
+        const categorySwiper = new Swiper.default(".category-swiper", {
+            breakpoints: {
+                0: {
+                    spaceBetween: 20,
+                    slidesPerView: 1.5,
+                    centeredSlides: true,
+                },
+                576: {
+                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    centeredSlides: true,
+                },
+                768: {
+                    spaceBetween: 25,
+                    slidesPerView: 2.5,
+                    centeredSlides: true,
+                },
+                992: {
+                    spaceBetween: 25,
+                    slidesPerView: 3,
+                    centeredSlides: false,
+                },
+                1200: {
+                    spaceBetween: 30,
+                    slidesPerView: 3.5,
+                    centeredSlides: false,
+                },
+                1400: {
+                    spaceBetween: 35,
+                    slidesPerView: 4,
+                    centeredSlides: false,
+                },
+            },
+        });
+
+        categorySwiper.on('slideChange', () => {
+            let list = []
+
+            if ((categorySwiper.activeIndex) % 2) {
+                for (var i = 0; i < categorySwiper.slides.length; i += 2) {
+                    list.push(categorySwiper.slides[i]);
+                }
+            } else {
+                for (var i = 1; i < categorySwiper.slides.length; i += 2) {
+                    list.push(categorySwiper.slides[i]);
+                }
+            }
+
+            categorySwiper.slides.forEach(slide => {
+                slide.style["padding-top"] = "unset"
+                slide.style["margin-bottom"] = "50px"
+            })
+
+            list.forEach(slide => {
+                slide.style["margin-bottom"] = "unset"
+                slide.style['padding-top'] = "50px"
+            });
+        })
+
+
+        const newsSwiper = new Swiper.default('.news-swiper', {
+            breakpoints: {
+                0: {
+                    spaceBetween: 30,
+                    slidesPerView: 1,
+                },
+                576: {
+                    spaceBetween: 30,
+                    slidesPerView: 1.3,
+                },
+                768: {
+                    spaceBetween: 30,
+                    slidesPerView: 1.65,
+                },
+                992: {
+                    spaceBetween: 30,
+                    slidesPerView: 2.3,
+                },
+                1200: {
+                    spaceBetween: 40,
+                    slidesPerView: 2.65,
+                },
+                1400: {
+                    spaceBetween: 40,
+                    slidesPerView: 3,
+                },
+            },
+        })
+    </script>
+
+    <script>
+        ScrollReveal.default().reveal("#welcome-reveal", {
+            origin: "left",
+            duration: 750,
+            distance: "50px",
+            easing: "cubic-bezier(.4,0,.5,1)",
+        });
+
+        ScrollReveal.default().reveal("#welcome-reveal > strong", {
+            duration: 400,
+            delay: 600
+        });
+
+        ScrollReveal.default().reveal("#category-reveal", {
+            origin: "top",
+            duration: 750,
+            distance: "10px",
+        });
+
+        ScrollReveal.default().reveal("#about-image-reveal", {
+            origin: "left",
+            duration: 750,
+            distance: "10px",
+            mobile: false,
+        });
+
+        ScrollReveal.default().reveal("#about-reveal", {
+            origin: "right",
+            duration: 750,
+            distance: "10px",
+        });
+
+        ScrollReveal.default().reveal("#news-reveal", {
+            origin: "top",
+            duration: 750,
+            distance: "20px",
+        });
+
+        ScrollReveal.default().reveal("#contact-reveal", {
+            origin: "top",
+            duration: 750,
+            scale: 0.5,
+            distance: "20px",
+        });
+    </script>
 @endpush

@@ -1,8 +1,10 @@
-import jQuery from "jquery";
-window.$ = jQuery;
+window.$ = require('jquery');
 
-import Swiper from "swiper";
-import "swiper/css";
+window.Swiper = require('swiper')
+
+window.ScrollReveal = require('scrollreveal')
+
+window.Animate = require('animate.css')
 
 $(document).ready(() => {
     let menuStatus = false;
@@ -69,7 +71,9 @@ $(document).ready(() => {
         };
     };
 
-    $("#burger-btn").click(() => {
+    $("#burger-btn").click((e) => {
+
+        e.preventDefault()
         if (!menuStatus) {
             openMenu();
         } else {
@@ -96,119 +100,12 @@ $(document).ready(() => {
     );
 });
 
-const categorySwiper = new Swiper(".category-swiper", {
-    breakpoints: {
-        0: {
-            spaceBetween: 20,
-            slidesPerView: 1.5,
-            centeredSlides: true,
-        },
-        576: {
-            spaceBetween: 20,
-            slidesPerView: 2,
-            centeredSlides: true,
-        },
-        768: {
-            spaceBetween: 25,
-            slidesPerView: 2.5,
-            centeredSlides: true,
-        },
-        992: {
-            spaceBetween: 25,
-            slidesPerView: 3,
-            centeredSlides: false,
-        },
-        1200: {
-            spaceBetween: 30,
-            slidesPerView: 3.5,
-            centeredSlides: false,
-        },
-        1400: {
-            spaceBetween: 35,
-            slidesPerView: 4,
-            centeredSlides: false,
-        },
-    },
-});
+const navLinksAnimations = 'animate__animated animate__headShake animate__faster'
 
-categorySwiper.on('beforeSlideChangeStart', ()=>{
-    console.log(categorySwiper.activeIndex)
+$('li.nav-link').on('mouseenter', function(){
+    $(this).addClass(navLinksAnimations)
 })
 
-const newsSwiper = new Swiper('.news-swiper', {
-    breakpoints: {
-        0: {
-            spaceBetween: 30,
-            slidesPerView: 1,
-        },
-        576: {
-            spaceBetween: 30,
-            slidesPerView: 1.3,
-        },
-        768: {
-            spaceBetween: 30,
-            slidesPerView: 1.65,
-        },
-        992: {
-            spaceBetween: 30,
-            slidesPerView: 2.3,
-        },
-        1200: {
-            spaceBetween: 40,
-            slidesPerView: 2.65,
-        },
-        1400: {
-            spaceBetween: 40,
-            slidesPerView: 3,
-        },
-    },
+$('li.nav-link').on('mouseleave', function(){
+    $(this).removeClass(navLinksAnimations)
 })
-
-// const addSlidePadding = (el, add) => {
-//     if(add){
-//         el.addClass('slidePadding')
-//     }else{
-//         el.removeClass('slidePadding')
-//     }
-// }
-
-ScrollReveal().reveal("#welcome-reveal", {
-    origin: "left",
-    duration: 750,
-    distance: "50px",
-    easing: "cubic-bezier(.4,0,.5,1)",
-});
-
-ScrollReveal().reveal("#welcome-reveal > strong", { duration: 500, delay: 750 });
-
-ScrollReveal().reveal("#category-reveal", {
-    origin: "top",
-    duration: 750,
-    distance: "10px",
-});
-
-ScrollReveal().reveal("#about-image-reveal", {
-    origin: "left",
-    duration: 750,
-    distance: "10px",
-    mobile: false,
-});
-
-ScrollReveal().reveal("#about-reveal", {
-    origin: "right",
-    duration: 750,
-    distance: "10px",
-});
-
-ScrollReveal().reveal("#news-reveal", {
-    origin: "top",
-    duration: 750,
-    distance: "20px",
-});
-
-ScrollReveal().reveal("#contact-reveal", {
-    origin: "top",
-    duration: 750,
-    scale: 0.5,
-    distance: "20px",
-});

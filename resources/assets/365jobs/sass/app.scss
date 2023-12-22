@@ -4,6 +4,9 @@
 @import 'variables';
 @import 'config';
 
+@import "swiper/css";
+@import 'animate.css';
+
 @import 'page/homepage.scss';
 
 @import 'layouts/header';
@@ -11,7 +14,7 @@
 @import 'partials/burger';
 
 body{
-    background-position: top -100 right -900px;
+    background-position: top -100px right -900px;
     background-size: 1900px;
     background-repeat: no-repeat;
     background-attachment: fixed;
