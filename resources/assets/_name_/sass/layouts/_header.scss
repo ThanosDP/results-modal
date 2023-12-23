@@ -1,0 +1,18 @@
+//! Default
+header{
+
+}
+
+//! Desktop
+@media screen and (min-width: 992px) {
+    header{
+        
+    }
+}
+
+//! Mobile
+@media screen and (max-width: 992px) {
+    header{
+        
+    }
+}

@@ -1,0 +1,18 @@
+//! Default
+#homepage{
+
+}
+
+//! Desktop
+@media screen and (min-width: 992px) {
+    #homepage{
+
+    }
+}
+
+//! Mobile
+@media screen and (max-width: 992px) {
+    #homepage{
+
+    }
+}

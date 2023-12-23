@@ -1,0 +1,18 @@
+//! Default
+footer{
+
+}
+
+//! Desktop
+@media screen and (min-width: 992px) {
+    footer{
+
+    }
+}
+
+//! Mobile
+@media screen and (max-width: 992px) {
+    footer{
+        
+    }
+}

@@ -12,9 +12,9 @@ mix.disableSuccessNotifications();
  |
  */
 
-mix.js("resources/assets/365jobs/js/app.js", "public/365jobs/js/app.js").sass(
-    "resources/assets/365jobs/sass/app.scss",
-    "public/365jobs/css/app.css"
+mix.js("resources/assets/_name_/js/app.js", "public/_name_/js/app.js").sass(
+    "resources/assets/_name_/sass/app.scss",
+    "public/_name_/css/app.css"
 );
 
 if (mix.inProduction()) {
