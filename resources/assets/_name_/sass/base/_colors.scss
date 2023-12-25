@@ -1,0 +1,38 @@
+/**
+ * Global color palette
+ * =================================
+ * - Generic colors
+ * - Color scheme
+ * - Common colors
+ * - Links
+ * - Any others..
+ */
+
+// Generic colors
+$blue: #288ad6;
+$green: #16c98d;
+$red: #fa5e5b;
+$yellow: #feef6d;
+$orange: #fe7c08;
+$pink: #ff708e;
+$purple: #8e44ad;
+$gray: #95a5a6;
+
+$dark: #000;
+$bright: #fff;
+
+// Color scheme
+$color-primary                : #6742fe;
+$color-secondary              : #303b59;
+$color-highlight              : #7C74C7;
+
+// Common colors
+$color-text                   : #171717;
+$color-bg                     : #ffffff;
+$color-border                 : transparent;
+
+// Links
+$color-link-default           : $color-text;
+$color-link-visited           : $color-link-default;
+$color-link-hover             : $color-highlight;
+$color-link-active            : darken($color-link-default, 20%);

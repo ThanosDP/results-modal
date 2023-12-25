@@ -13,7 +13,7 @@ mix.disableSuccessNotifications();
  */
 
 mix.js("resources/assets/_name_/js/app.js", "public/_name_/js/app.js").sass(
-    "resources/assets/_name_/sass/app.scss",
+    "resources/assets/_name_/sass/main.scss",
     "public/_name_/css/app.css"
 );
 
